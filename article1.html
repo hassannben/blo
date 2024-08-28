@@ -53,5 +53,30 @@
             </div>
         </div>
     </footer>
+    <script>
+        // تحسين التفاعل مع قائمة التنقل
+  document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      if (menuToggle && navMenu) {
+          menuToggle.addEventListener('click', () => {
+              navMenu.classList.toggle('open');
+              menuToggle.classList.toggle('active');
+          });
+      } else {
+          console.error('Elements .menu-toggle or .nav-menu not found.');
+      }
+  });
+  
+  // تحسين تحميل الصور
+  document.addEventListener('DOMContentLoaded', function() {
+      const lazyImages = document.querySelectorAll('img.lazyload');
+      lazyImages.forEach(img => {
+          img.src = img.dataset.src;
+      });
+  });
+  
+      </script>
 </body>
 </html>
