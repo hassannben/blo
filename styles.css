@@ -220,15 +220,21 @@ footer .socials a {
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        padding: 10px;
     }
 
     nav ul {
         flex-direction: column;
+        margin-top: 10px;
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 5px 0;
     }
 
     main.container {
@@ -238,4 +244,60 @@ footer .socials a {
     .posts {
         grid-template-columns: 1fr;
     }
+
+    .sidebar {
+        display: none; /* إخفاء الشريط الجانبي على الشاشات الصغيرة */
+    }
+
+    .contact-us {
+        margin: 20px 10px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    footer ul li {
+        margin: 5px 0;
+    }
+
+    footer .socials a {
+        font-size: 1.2rem;
+        margin: 5px;
+    }
 }
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .post-content p {
+        font-size: 0.9rem;
+    }
+
+    .contact-us button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .post img {
+        height: 150px;
+    }
+
+    .post-content {
+        padding: 10px;
+    }
+}
+
