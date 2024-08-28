@@ -17,70 +17,97 @@ body {
     height: 200px;
 
 }
-/* إخفاء زر القائمة الجانبية على الشاشات الأكبر */
-.menu-toggle {
-    display: none;
+/* زر القائمة الجانبية */
+#navMobile {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    /* أضف المزيد من الأنماط حسب الحاجة */
 }
 
-/* إظهار زر القائمة الجانبية فقط على الشاشات الصغيرة */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-menu {
-        display: none; /* إخفاء القائمة الجانبية على الشاشات الصغيرة */
-    }
-
-    .nav-menu.open {
-        display: block; /* إظهار القائمة عند النقر على الزر */
-    }
-}
-/* تحسينات التأثيرات */
-a, button {
-    transition: all 0.3s ease-in-out; /* تأثير انتقال سلس */
+/* قائمة التنقل */
+.nav-menu {
+    display: none; /* إخفاء القائمة افتراضيًا */
 }
 
-/* تأثيرات التمرير */
-.post:hover {
-    transform: translateY(-10px); /* رفع المقالة عند التمرير */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* ظل أعمق */
+/* إظهار القائمة الجانبية عند تفعيلها */
+.sidebar.active .nav-menu {
+    display: block; /* عرض القائمة عند النقر على الزر */
 }
 
-/* تأثيرات التمرير في قائمة التنقل */
-nav ul li a:hover {
-    background-color: #1abc9c; /* لون خلفية عند التمرير */
-    color: #fff; /* تغيير لون النص عند التمرير */
-    transform: scale(1.1); /* تكبير عند التمرير */
-}
+/* المزيد من الأنماط حسب الحاجة */
 
-/* تأثيرات تفاعل نموذج الاتصال */
-.contact-us button:focus {
-    outline: 2px solid #1abc9c; /* إضافة حدود عند التركيز */
-    outline-offset: 2px; /* إضافة تباعد حول الحدود */
-}
-
-.nav-menu li {
-    transition: background-color 0.3s ease;
-}
-.nav-menu li:hover {
-    background-color: #16a085; /* لون خلفية عند التمرير */
-}
+/* شيفرة لإخفاء/إظهار القائمة الجانبية */
 button {
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #1abc9c; /* لون الخلفية */
-    color: #fff; /* لون النص */
+    background: none;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
+    padding: 10px;
+    font-size: 24px; /* حجم الأيقونة */
+    color: #333; /* لون الأيقونة */
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 button:hover {
-    background-color: #16a085; /* لون خلفية عند التمرير */
+    color: #1abc9c; /* لون الأيقونة عند التمرير */
 }
 
+/* تصميم القائمة الجانبية */
+/* الأساسيات لتنسيق القائمة الجانبية */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #4433b6;
+    position: fixed;
+    top: 0;
+    right: -250px; /* مخفية افتراضيًا */
+    transition: right 0.3s ease;
+    padding-top: 60px;
+    z-index: 1000; /* تأكد من أن القائمة تظهر فوق العناصر الأخرى */
+}
+
+/* حالة القائمة الجانبية عندما تكون نشطة */
+.sidebar.active {
+    right: 0; /* إظهار القائمة */
+}
+
+/* تصميم عناصر القائمة الجانبية */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: right;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #1f1abc;
+}
+
+/* التصميم الأساسي للزر */
+#navMobile {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* التصميم الأساسي للزر عند النقر */
+#navMobile:focus {
+    outline: none;
+}
 
 /* تحسين التنسيق داخل الحاوية */
 .containerr {
@@ -157,29 +184,54 @@ nav a.active {
 
 nav a:hover,
 nav a:focus {
-    background-color: #36b138; /* لون الخلفية عند التمرير أو التركيز */
+    background-color: #493bb7; /* لون الخلفية عند التمرير أو التركيز */
     color: #fff; /* لون النص عند التمرير أو التركيز */
 }
 
-/* تصميم الرأس */
+/* تنسيق الهيدر */
 header {
-    background-color: #2980b9;
-    color: #fff;
-    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* يوزع العناصر بالتساوي بين اليمين واليسار */
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
 }
 
+/* تنسيق الحاوية داخل الهيدر */
 header .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-direction: row-reverse; /* تغيير اتجاه العناصر في الرأس */
+    flex: 1;
+    justify-content: center; /* مراكز العناصر داخل الحاوية */
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 24px;
     margin: 0;
-    padding: 10px 20px;
 }
+
+header img {
+    /* يمكن تعديل حجم الصورة إذا لزم الأمر */
+    width: 100px;
+    height: 100px;
+}
+
+/* تنسيق زر القائمة الجانبية */
+#navMobile {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* تنسيق زر القائمة الجانبية عند النقر */
+#navMobile:focus {
+    outline: none;
+}
+
 
 /* تحسين رابط النشط */
 .active {

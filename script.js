@@ -16,34 +16,22 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(post);
     });
 
-    // تحديد عناصر القائمة الجانبية وتطبيق toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
-            menuToggle.classList.toggle('active');
-        });
-    } else {
-        console.error('Elements .menu-toggle or .nav-menu not found.');
-    }
-});
-
-// تحسين تحميل الصور
-
-    const lazyImages = document.querySelectorAll('img.lazyload');
-    lazyImages.forEach(img => {
-        img.src = img.dataset.src;
-    // التأكد من وجود العناصر قبل إضافة الأحداث
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
-        });
-    } else {
-        console.error('Elements .menu-toggle or .nav-menu not found.');
+    function openSidenav() {
+        document.querySelector('.sidebar').classList.toggle('active');
     }
     
+    function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('active');
+    }
     
+    function toggleNavMenu() {
+        const navMenu = document.querySelector('.nav-menu');
+        navMenu.classList.toggle('active');
+    }
+    
+    // Call the functions as needed, e.g., attach them to buttons
+    // Example:
+    // document.querySelector('.sidebar-toggle-button').addEventListener('click', toggleSidebar);
+    // document.querySelector('.nav-menu-toggle-button').addEventListener('click', toggleNavMenu);
 });
-

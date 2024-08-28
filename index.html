@@ -13,7 +13,7 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="مدونة foorfree - مقالات ومحتوى مميز">
-    <meta name="twitter:description" content="مدونة foorfrre تقدم مقالات ومحتوى مميز حول مواضيع متنوعة. تابع أحدث المقالات هنا.">
+    <meta name="twitter:description" content="مدونة foorfree تقدم مقالات ومحتوى مميز حول مواضيع متنوعة. تابع أحدث المقالات هنا.">
     <meta name="twitter:image" content="رابط_صورة_مميزة">
     <link rel="canonical" href="https://hassannben.github.io/blo/">
     <title>مدونة foorfree - مقالات ومحتوى مميز</title>
@@ -27,31 +27,20 @@
 <body>
     <header>
         <div class="container">
-            <button class="menu-toggle" aria-label="Toggle navigation">
+            <button aria-label="فتح القائمة" id="navMobile" onclick="toggleSidenav()">
                 <i class="fas fa-bars"></i>
             </button>
-            
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="index.html" class="active">الرئيسية</a></li>
-                    <li><a href="#">من نحن</a></li>
-                    <li><a href="#">سياسة الخصوصية</a></li>
-                </ul>
-            </nav>
             <h1>foorfree</h1>
-           
         </div>
-        <div> <img src="images/conan.png" alt="شعار الموقع"></div>
+        <img src="images/conan.png" alt="شعار الموقع" width="100" height="100">
     </header>
-    
-    
-    
     <aside class="sidebar">
-        <div class="ad-space">
-            <p>مساحة الإعلان</p>
-        </div>
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="#">من نحن</a></li>
+            <li><a href="#">سياسة الخصوصية</a></li>
+        </ul>
     </aside>
-
     <main class="container">
         <section class="posts">
             <a href="article1.html" class="post-link">
@@ -67,10 +56,9 @@
             <!-- تكرار المقالات هنا -->
         </section>
     </main>
-
     <footer>
         <div class="container">
-            <p>© 2024 مدونة فويرفر. جميع الحقوق محفوظة.</p>
+            <p>© 2024 مدونة foorfree. جميع الحقوق محفوظة.</p>
             <ul>
                 <li><a href="#">شروط الاستخدام</a></li>
                 <li><a href="#">سياسة الخصوصية</a></li>
@@ -83,31 +71,18 @@
             </div>
         </div>
     </footer>
-
     <script>
-      // تحسين التفاعل مع قائمة التنقل
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
-            menuToggle.classList.toggle('active');
+        function toggleSidenav() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+        document.addEventListener('click', function(event) {
+            const sidebar = document.querySelector('.sidebar');
+            const navMobile = document.getElementById('navMobile');
+            if (!sidebar.contains(event.target) && !navMobile.contains(event.target) && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
         });
-    } else {
-        console.error('Elements .menu-toggle or .nav-menu not found.');
-    }
-});
-
-// تحسين تحميل الصور
-document.addEventListener('DOMContentLoaded', function() {
-    const lazyImages = document.querySelectorAll('img.lazyload');
-    lazyImages.forEach(img => {
-        img.src = img.dataset.src;
-    });
-});
-
     </script>
 </body>
 </html>
