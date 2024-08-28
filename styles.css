@@ -178,7 +178,7 @@ nav a {
 }
 
 nav a.active {
-    background-color: #45d143; /* خلفية مميزة للعنصر النشط */
+    background-color: #5b43d1; /* خلفية مميزة للعنصر النشط */
     color: #fff; /* لون النص الأبيض */
 }
 
@@ -222,7 +222,7 @@ header img {
 #navMobile {
     background-color: transparent;
     border: none;
-    color: #333;
+    color: #4131a9;
     font-size: 24px;
     cursor: pointer;
 }
@@ -235,7 +235,7 @@ header img {
 
 /* تحسين رابط النشط */
 .active {
-    background-color: #45d143; /* خلفية مميزة للعنصر النشط */
+    background-color: #5b43d1; /* خلفية مميزة للعنصر النشط */
     color: #fff; /* لون النص الأبيض */
     font-weight: bold; /* جعل النص غامق */
     border-radius: 8px; /* زاوية دائرية لتلطيف الزوايا */
@@ -247,7 +247,7 @@ header img {
 
 .active:hover,
 .active:focus {
-    background-color: #36b138; /* لون الخلفية عند التمرير أو التركيز */
+    background-color: #3638b1; /* لون الخلفية عند التمرير أو التركيز */
     transform: scale(1.05); /* تكبير بسيط عند التمرير أو التركيز */
     outline: none; /* إزالة التأثير الافتراضي عند التركيز */
     box-shadow: 0 0 0 2px #36b138; /* ظل لإبراز العنصر عند التركيز */

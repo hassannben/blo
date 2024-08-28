@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
     // تحديد المقالات وتطبيق IntersectionObserver
     const posts = document.querySelectorAll('.post');
 
@@ -16,22 +15,22 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(post);
     });
 
-    function openSidenav() {
-        document.querySelector('.sidebar').classList.toggle('active');
-    }
-    
+    // دالة لتبديل القائمة الجانبية
     function toggleSidebar() {
         const sidebar = document.querySelector('.sidebar');
         sidebar.classList.toggle('active');
     }
+
+    // ربط الزر بتبديل القائمة الجانبية
+    document.getElementById('navMobile').addEventListener('click', toggleSidebar);
+
+    // إغلاق القائمة الجانبية عند النقر في أي مكان آخر
+    document.addEventListener('click', function(event) {
+        const sidebar = document.querySelector('.sidebar');
+        const navMobile = document.getElementById('navMobile');
+        if (!sidebar.contains(event.target) && !navMobile.contains(event.target) && sidebar.classList.contains('active')) {
+            sidebar.classList.remove('active');
+        }
+    });
     
-    function toggleNavMenu() {
-        const navMenu = document.querySelector('.nav-menu');
-        navMenu.classList.toggle('active');
-    }
-    
-    // Call the functions as needed, e.g., attach them to buttons
-    // Example:
-    // document.querySelector('.sidebar-toggle-button').addEventListener('click', toggleSidebar);
-    // document.querySelector('.nav-menu-toggle-button').addEventListener('click', toggleNavMenu);
 });
