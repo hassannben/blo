@@ -14,6 +14,84 @@ body {
     direction: rtl; /* تعيين اتجاه النص من اليمين لليسار */
 }
 
+
+/* تحسين التنسيق داخل الحاوية */
+.containerr {
+    width: 100%; /* العرض الكامل للحاوية بدلاً من عرض ثابت */
+    max-width: 1200px; /* تحديد أقصى عرض للحاوية */
+    margin: 0 auto; /* توسيط الحاوية */
+    padding: 20px; /* تباعد داخلي */
+    text-align: center; /* توسيط النصوص */
+    background-color:#1c86ef; /* خلفية بيضاء لتحسين التباين */
+    border-radius: 10px; /* زوايا دائرية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف لإعطاء عمق */
+    min-height: 200px; /* تحديد الحد الأدنى للارتفاع */
+    display: flex;
+    flex-direction: row; /* ترتيب العناصر أفقيًا */
+    align-items: center; /* توسيط المحتوى عمودياً */
+    justify-content: center; /* توسيط المحتوى أفقيًا */
+    box-sizing: border-box; /* لضمان أن التباعد الداخلي لا يؤثر على الحجم الكلي للحاوية */
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .containerr {
+        padding: 15px; /* تقليل التباعد الداخلي على الشاشات الصغيرة */
+    }
+}
+
+/* استجابة للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .containerr {
+        padding: 10px; /* تقليل التباعد الداخلي بشكل أكبر على الشاشات الصغيرة جداً */
+    }
+}
+
+
+h1 {
+    font-size: 2.5em; /* حجم خط أكبر للعناوين */
+    margin-bottom: 20px; /* تباعد أسفل العنوان */
+    color: #333; /* لون النص */
+    font-family: 'Tajawal', sans-serif; /* استخدام الخط المحدد */
+}
+
+img {
+    max-width: 100%; /* تحديد أقصى عرض للصورة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    margin-bottom: 20px; /* تباعد أسفل الصورة */
+}
+
+nav ul {
+    list-style: none; /* إزالة النقاط من القائمة */
+    padding: 0; /* إزالة التباعد الداخلي */
+    margin: 0; /* إزالة التباعد الخارجي */
+}
+
+nav ul li {
+    display: inline; /* عرض العناصر بشكل أفقي */
+    margin: 0 15px; /* تباعد أفقي بين العناصر */
+}
+
+nav a {
+    text-decoration: none; /* إزالة التسطير */
+    color: #333; /* لون النص الافتراضي */
+    font-size: 1.2em; /* حجم خط أكبر للروابط */
+    padding: 10px 15px; /* تباعد حول النصوص */
+    border-radius: 5px; /* زوايا دائرية */
+    transition: background-color 0.3s ease, color 0.3s ease; /* تأثيرات الانتقال */
+}
+
+nav a.active {
+    background-color: #45d143; /* خلفية مميزة للعنصر النشط */
+    color: #fff; /* لون النص الأبيض */
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #36b138; /* لون الخلفية عند التمرير أو التركيز */
+    color: #fff; /* لون النص عند التمرير أو التركيز */
+}
+
 /* تصميم الرأس */
 header {
     background-color: #2980b9;
@@ -32,6 +110,24 @@ header h1 {
     font-size: 2.5rem;
     margin: 0;
     padding: 10px 20px;
+}
+.active {
+    background-color: #45d143; /* خلفية مميزة للعنصر النشط */
+    color: #fff; /* لون النص الأبيض */
+    font-weight: bold; /* جعل النص غامق */
+    border-radius: 8px; /* زاوية دائرية لتلطيف الزوايا */
+    padding: 10px 15px; /* تباعد حول النص */
+    text-decoration: none; /* إزالة التسطير */
+    display: inline-block; /* عرض العنصر ككتلة مضمنة */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* تأثيرات الانتقال */
+}
+
+.active:hover,
+.active:focus {
+    background-color: #36b138; /* لون الخلفية عند التمرير أو التركيز */
+    transform: scale(1.05); /* تكبير بسيط عند التمرير أو التركيز */
+    outline: none; /* إزالة التأثير الافتراضي عند التركيز */
+    box-shadow: 0 0 0 2px #36b138; /* ظل لإبراز العنصر عند التركيز */
 }
 
 nav ul {
@@ -72,6 +168,30 @@ main.container {
     justify-content: space-between;
     padding: 20px;
     gap: 20px;
+    flex-wrap: wrap; /* للسماح للعناصر بالانتقال إلى الأسطر التالية */
+}
+
+.read-more {
+    padding: 15px 25px; /* زيادة التباعد الداخلي حول النص */
+    background: #45d143; /* لون الخلفية الأخضر */
+    border-radius: 8px; /* زاوية دائرية للزر */
+    color: #fff; /* لون النص الأبيض */
+    text-align: center; /* توسيط النص */
+    text-decoration: none; /* إزالة التسطير */
+    font-weight: bold; /* جعل النص غامق */
+    font-size: 16px; /* حجم النص */
+    display: inline-block; /* عرض الزر ككتلة مضمنة */
+    transition: background 0.3s ease, transform 0.3s ease; /* تأثيرات الانتقال */
+}
+
+.read-more:hover {
+    background: #36b138; /* لون الخلفية عند التمرير */
+    transform: scale(1.05); /* تكبير بسيط عند التمرير */
+}
+
+.read-more:focus {
+    outline: none; /* إزالة التأثير الافتراضي عند التركيز */
+    box-shadow: 0 0 0 2px #36b138; /* ظل لإبراز الزر عند التركيز */
 }
 
 .posts {
@@ -81,24 +201,75 @@ main.container {
     gap: 20px;
 }
 
+/* تحسين الرابط الخاص بالمقالة */
+.post-link {
+    display: block;
+    text-decoration: none; /* إزالة التسطير */
+    color: inherit; /* استخدام لون النص الداخلي للمقالة */
+}
+
 .post {
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.post img {
+    width: 100%;
+    height: 200px; /* تحسين حجم الصورة */
+    object-fit: cover;
+    border-bottom: 3px solid #2980b9;
+    transition: transform 0.3s ease, filter 0.3s;
+}
+
+.post img:hover {
+    transform: scale(1.1);
+    filter: brightness(90%);
+}
+
+.post-content {
+    padding: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #45d143;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.read-more:hover {
+    background: #36b138;
+    transform: scale(1.05); /* تكبير بسيط عند التمرير */
+}
+
 
 .post.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* تحسين حجم الصورة في المقالات */
+.full-post img {
+    width: 100%; /* يضمن أن الصورة لا تتجاوز عرض الحاوية */
+    height: 300px; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    border-radius: 8px; /* لتصميم الزوايا */
+    margin-bottom: 20px; /* تباعد الصورة عن النص */
+}
+
+.full-post h2 {
+    margin-bottom: 20px;
+}
+
 .post img {
     width: 100%;
-    height: 200px;
+    height: 200px; /* تحسين حجم الصورة */
     object-fit: cover;
     border-bottom: 3px solid #2980b9;
     transition: transform 0.3s ease, filter 0.3s;
@@ -118,63 +289,6 @@ main.container {
     margin-bottom: 15px;
 }
 
-/* تصميم قسم اتصل بنا */
-.contact-us {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center;
-}
-
-.contact-us form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.contact-us label {
-    display: block;
-    font-weight: bold;
-}
-
-.contact-us input,
-.contact-us textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.contact-us button {
-    background-color: #2980b9;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-}
-
-.contact-us button:hover {
-    background-color: #1abc9c;
-}
-
-/* تصميم الشريط الجانبي */
-.sidebar {
-    flex: 1;
-}
-
-.sidebar .ad-space {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
 
 /* تصميم التذييل */
 footer {
@@ -300,4 +414,3 @@ footer .socials a {
         padding: 10px;
     }
 }
-

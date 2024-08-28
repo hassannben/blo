@@ -14,4 +14,5 @@ document.addEventListener('DOMContentLoaded', function() {
     posts.forEach(post => {
         observer.observe(post);
     });
+    
 });

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا</title>
+    <style>
+        /* تصميم قسم اتصل بنا */
+        .contact-us {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto; /* توسيط الحاوية */
+            width: 90%; /* عرض مرن */
+            max-width: 500px; /* أقصى عرض */
+            text-align: center;
+        }
+
+        .contact-us form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 0 auto;
+        }
+
+        .contact-us label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .contact-us input,
+        .contact-us textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-us button {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-us button:hover {
+            background-color: #1abc9c;
+            transform: scale(1.05); /* تكبير عند التمرير */
+        }
+
+        /* تصميم الشريط الجانبي */
+        .sidebar {
+            flex: 1;
+        }
+
+        .sidebar .ad-space {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="contact-us">
+        <h3>اتصل بنا</h3>
+       <!-- modify this form HTML and place wherever you want your form -->
+<form
+action="https://formspree.io/f/xeojnrjr"
+method="POST"
+>
+<label>
+  Your email:
+  <input type="email" name="email">
+</label>
+<label>
+  Your message:
+  <textarea name="message"></textarea>
+</label>
+<!-- your other form fields go here -->
+<button type="submit">Send</button>
+</form>
+    </section>
+</body>
+</html>
