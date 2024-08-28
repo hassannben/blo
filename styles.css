@@ -109,14 +109,13 @@ main.container {
     filter: brightness(90%);
 }
 
-/* تحسين التباعد والنصوص */
 .post-content h2 {
     font-size: 1.8rem;
-    margin-bottom: 15px; /* زيادة المسافة السفلية */
+    margin-bottom: 15px;
 }
 
 .post-content p {
-    margin-bottom: 15px; /* زيادة المسافة السفلية */
+    margin-bottom: 15px;
 }
 
 /* تصميم قسم اتصل بنا */
@@ -188,65 +187,55 @@ footer .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    text-align: center;
 }
 
 footer p {
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 footer ul {
     list-style: none;
-    display: flex;
-    gap: 15px;
     padding-left: 0;
 }
 
 footer ul li {
-    margin: 0;
+    display: inline;
+    margin: 0 10px;
 }
 
 footer ul li a {
     color: #fff;
     text-decoration: none;
-}
-
-footer ul li a:hover {
-    text-decoration: underline;
-}
-
-footer .socials {
-    display: flex;
-    gap: 15px;
+    font-size: 1rem;
 }
 
 footer .socials a {
     color: #fff;
+    margin: 0 10px;
     font-size: 1.5rem;
-    transition: color 0.3s;
 }
 
-footer .socials a:hover {
-    color: #1abc9c;
-}
+/* تحسين الاستجابة */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-/* تحسين التصاميم الإعلانية */
-.ad-space {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 20px;
-}
+    nav ul {
+        flex-direction: column;
+    }
 
-.ad-space img {
-    max-width: 100%;
-    height: auto;
-}
+    nav ul li {
+        margin: 10px 0;
+    }
 
-.ad-space p {
-    margin: 0;
-    font-size: 1rem;
-    color: #333;
+    main.container {
+        flex-direction: column;
+    }
+
+    .posts {
+        grid-template-columns: 1fr;
+    }
 }
