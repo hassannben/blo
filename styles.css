@@ -1,0 +1,252 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    line-height: 1.6;
+    direction: rtl; /* تعيين اتجاه النص من اليمين لليسار */
+}
+
+/* تصميم الرأس */
+header {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse; /* تغيير اتجاه العناصر في الرأس */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse; /* تغيير اتجاه القائمة */
+    padding-left: 0;
+}
+
+nav ul li {
+    margin: 0 10px; /* تغيير المسافة لليمين */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav ul li a.active {
+    background-color: #1abc9c;
+    color: #fff;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c;
+    color: #f4f4f4;
+    transform: scale(1.05);
+}
+
+/* تصميم الجسم الرئيسي */
+main.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.posts {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.post {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.post.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #2980b9;
+    transition: transform 0.3s ease, filter 0.3s;
+}
+
+.post img:hover {
+    transform: scale(1.1);
+    filter: brightness(90%);
+}
+
+/* تحسين التباعد والنصوص */
+.post-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px; /* زيادة المسافة السفلية */
+}
+
+.post-content p {
+    margin-bottom: 15px; /* زيادة المسافة السفلية */
+}
+
+/* تصميم قسم اتصل بنا */
+.contact-us {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.contact-us label {
+    display: block;
+    font-weight: bold;
+}
+
+.contact-us input,
+.contact-us textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-us button {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.contact-us button:hover {
+    background-color: #1abc9c;
+}
+
+/* تصميم الشريط الجانبي */
+.sidebar {
+    flex: 1;
+}
+
+.sidebar .ad-space {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* تصميم التذييل */
+footer {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-left: 0;
+}
+
+footer ul li {
+    margin: 0;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .socials {
+    display: flex;
+    gap: 15px;
+}
+
+footer .socials a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer .socials a:hover {
+    color: #1abc9c;
+}
+
+/* تحسين التصاميم الإعلانية */
+.ad-space {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ad-space img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ad-space p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
