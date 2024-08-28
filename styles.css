@@ -13,6 +13,73 @@ body {
     line-height: 1.6;
     direction: rtl; /* تعيين اتجاه النص من اليمين لليسار */
 }
+.full-post img{
+    height: 200px;
+
+}
+/* إخفاء زر القائمة الجانبية على الشاشات الأكبر */
+.menu-toggle {
+    display: none;
+}
+
+/* إظهار زر القائمة الجانبية فقط على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none; /* إخفاء القائمة الجانبية على الشاشات الصغيرة */
+    }
+
+    .nav-menu.open {
+        display: block; /* إظهار القائمة عند النقر على الزر */
+    }
+}
+/* تحسينات التأثيرات */
+a, button {
+    transition: all 0.3s ease-in-out; /* تأثير انتقال سلس */
+}
+
+/* تأثيرات التمرير */
+.post:hover {
+    transform: translateY(-10px); /* رفع المقالة عند التمرير */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* ظل أعمق */
+}
+
+/* تأثيرات التمرير في قائمة التنقل */
+nav ul li a:hover {
+    background-color: #1abc9c; /* لون خلفية عند التمرير */
+    color: #fff; /* تغيير لون النص عند التمرير */
+    transform: scale(1.1); /* تكبير عند التمرير */
+}
+
+/* تأثيرات تفاعل نموذج الاتصال */
+.contact-us button:focus {
+    outline: 2px solid #1abc9c; /* إضافة حدود عند التركيز */
+    outline-offset: 2px; /* إضافة تباعد حول الحدود */
+}
+
+.nav-menu li {
+    transition: background-color 0.3s ease;
+}
+.nav-menu li:hover {
+    background-color: #16a085; /* لون خلفية عند التمرير */
+}
+button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #1abc9c; /* لون الخلفية */
+    color: #fff; /* لون النص */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #16a085; /* لون خلفية عند التمرير */
+}
 
 
 /* تحسين التنسيق داخل الحاوية */
@@ -22,7 +89,7 @@ body {
     margin: 0 auto; /* توسيط الحاوية */
     padding: 20px; /* تباعد داخلي */
     text-align: center; /* توسيط النصوص */
-    background-color:#1c86ef; /* خلفية بيضاء لتحسين التباين */
+    background-color: #1c86ef; /* خلفية زرقاء */
     border-radius: 10px; /* زوايا دائرية */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف لإعطاء عمق */
     min-height: 200px; /* تحديد الحد الأدنى للارتفاع */
@@ -47,20 +114,22 @@ body {
     }
 }
 
-
+/* تحسين حجم الخط والتباعد للعناوين */
 h1 {
-    font-size: 2.5em; /* حجم خط أكبر للعناوين */
+    font-size: 2.5rem; /* حجم خط أكبر للعناوين */
     margin-bottom: 20px; /* تباعد أسفل العنوان */
     color: #333; /* لون النص */
     font-family: 'Tajawal', sans-serif; /* استخدام الخط المحدد */
 }
 
+/* تحسين الصور */
 img {
     max-width: 100%; /* تحديد أقصى عرض للصورة */
     height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
     margin-bottom: 20px; /* تباعد أسفل الصورة */
 }
 
+/* تحسين القائمة في التنقل */
 nav ul {
     list-style: none; /* إزالة النقاط من القائمة */
     padding: 0; /* إزالة التباعد الداخلي */
@@ -75,7 +144,7 @@ nav ul li {
 nav a {
     text-decoration: none; /* إزالة التسطير */
     color: #333; /* لون النص الافتراضي */
-    font-size: 1.2em; /* حجم خط أكبر للروابط */
+    font-size: 1.2rem; /* حجم خط أكبر للروابط */
     padding: 10px 15px; /* تباعد حول النصوص */
     border-radius: 5px; /* زوايا دائرية */
     transition: background-color 0.3s ease, color 0.3s ease; /* تأثيرات الانتقال */
@@ -111,6 +180,8 @@ header h1 {
     margin: 0;
     padding: 10px 20px;
 }
+
+/* تحسين رابط النشط */
 .active {
     background-color: #45d143; /* خلفية مميزة للعنصر النشط */
     color: #fff; /* لون النص الأبيض */
@@ -130,6 +201,7 @@ header h1 {
     box-shadow: 0 0 0 2px #36b138; /* ظل لإبراز العنصر عند التركيز */
 }
 
+/* تحسين القائمة في التنقل */
 nav ul {
     list-style: none;
     display: flex;
@@ -194,6 +266,7 @@ main.container {
     box-shadow: 0 0 0 2px #36b138; /* ظل لإبراز الزر عند التركيز */
 }
 
+/* تحسين تصميم المقالات */
 .posts {
     flex: 3;
     display: grid;
@@ -213,204 +286,172 @@ main.container {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+.post:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* رفع المقالة عند التمرير */
+}
+
+/* تحسين العناصر داخل المقالة */
 .post img {
     width: 100%;
-    height: 200px; /* تحسين حجم الصورة */
+    height: 200px;
     object-fit: cover;
-    border-bottom: 3px solid #2980b9;
-    transition: transform 0.3s ease, filter 0.3s;
 }
 
-.post img:hover {
-    transform: scale(1.1);
-    filter: brightness(90%);
+.post .content {
+    padding: 20px;
 }
 
-.post-content {
-    padding: 15px;
+.post h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-.read-more {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #45d143;
-    border-radius: 5px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.3s ease;
+.post p {
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
-.read-more:hover {
-    background: #36b138;
+/* تحسين تنسيق الأزرار */
+.button {
+    background: #1abc9c; /* خلفية الأزرار */
+    color: #fff; /* لون النص الأبيض */
+    padding: 10px 20px; /* تباعد داخلي */
+    border-radius: 5px; /* زوايا دائرية */
+    text-decoration: none; /* إزالة التسطير */
+    font-weight: bold; /* جعل النص غامق */
+    transition: background 0.3s ease, transform 0.3s ease; /* تأثيرات الانتقال */
+}
+
+.button:hover {
+    background: #16a085; /* لون الخلفية عند التمرير */
     transform: scale(1.05); /* تكبير بسيط عند التمرير */
 }
 
-
-.post.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* تحسين تصميم نموذج الاتصال */
+.contact-us {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* تباعد بين العناصر */
 }
 
-/* تحسين حجم الصورة في المقالات */
-.full-post img {
-    width: 100%; /* يضمن أن الصورة لا تتجاوز عرض الحاوية */
-    height: 300px; /* الحفاظ على نسبة العرض إلى الارتفاع */
-    border-radius: 8px; /* لتصميم الزوايا */
-    margin-bottom: 20px; /* تباعد الصورة عن النص */
-}
-
-.full-post h2 {
-    margin-bottom: 20px;
-}
-
-.post img {
+/* تحسين الحقول */
+.contact-us input,
+.contact-us textarea {
     width: 100%;
-    height: 200px; /* تحسين حجم الصورة */
-    object-fit: cover;
-    border-bottom: 3px solid #2980b9;
-    transition: transform 0.3s ease, filter 0.3s;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.post img:hover {
-    transform: scale(1.1);
-    filter: brightness(90%);
+.contact-us textarea {
+    min-height: 150px;
+    resize: vertical; /* السماح بتغيير الحجم عموديًا فقط */
 }
 
-.post-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-.post-content p {
-    margin-bottom: 15px;
-}
-
-
-/* تصميم التذييل */
-footer {
-    background-color: #2980b9;
+/* تحسين زر إرسال النموذج */
+.contact-us button {
+    background: #1abc9c;
     color: #fff;
-    padding: 20px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease; /* تأثيرات الانتقال */
+}
+
+.contact-us button:hover {
+    background: #16a085;
+    transform: scale(1.05);
+}
+
+.contact-us button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #16a085;
+}
+
+
+footer {
+    
+    background-color: #2479cd; /* خلفية داكنة للفوتر */
+    color: #ecf0f1; /* لون النص الفاتح */
+    padding: 20px 0; /* تباعد عمودي للفوتر */
+    text-align: center; /* توسيط النصوص */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للفوتر */
 }
 
 footer .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-footer p {
-    margin-bottom: 10px;
+    align-items: center; /* توسيط العناصر عموديًا */
+    max-width: 1200px; /* تحديد أقصى عرض للحاوية */
+    margin: 0 auto; /* توسيط الحاوية */
+    padding: 0 20px; /* تباعد داخلي على الجانبين */
+    
 }
 
 footer ul {
-    list-style: none;
-    padding-left: 0;
+    display: flex;
+    flex-direction: row; /* عرض العناصر عموديًا */
+    padding: 0; /* إزالة التباعد الداخلي */
+    list-style: none; /* إزالة النقاط من القائمة */
+    margin: 15px 0; /* تباعد عمودي بين القائمة والعناصر الأخرى */
+    align-items: center; /* توسيط العناصر أفقيًا */
 }
 
 footer ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 10px 0; /* زيادة التباعد العمودي بين العناصر */
+    padding: 10px 15px; /* إضافة تباعد داخلي لجعل العنصر أكبر قليلاً */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* تأثير الانتقال عند التمرير */
+    width: 100%; /* جعل العناصر بعرض الحاوية */
+    text-align: center; /* توسيط النص داخل العنصر */
+    color: #fff; /* لون النص الافتراضي */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+    border-radius: 5px; /* زوايا دائرية خفيفة للعنصر */
 }
 
 footer ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
+    color: #fff; /* لون الروابط أبيض */
+    text-decoration: none; /* إزالة التسطير تحت الروابط */
+    transition: color 0.3s ease; /* تأثير تغيير اللون عند التمرير */
+}
+
+footer ul li a:hover {
+    color: #1abc9c; /* تغيير لون الروابط عند التمرير */
+}
+
+footer .socials {
+    margin-top: 20px; /* زيادة التباعد العمودي أعلى من العناصر الأخرى */
+    display: flex; /* عرض الرموز بشكل أفقي */
+    gap: 15px; /* تباعد بين الرموز */
 }
 
 footer .socials a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* حجم خط أكبر للرموز الاجتماعية */
+    color: #ecf0f1; /* لون الرموز */
+    transition: color 0.3s ease, transform 0.3s ease; /* تأثير التغيير في اللون والحجم */
 }
 
-/* تحسين الاستجابة */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-        padding: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    main.container {
-        flex-direction: column;
-    }
-
-    .posts {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        display: none; /* إخفاء الشريط الجانبي على الشاشات الصغيرة */
-    }
-
-    .contact-us {
-        margin: 20px 10px;
-    }
-
-    footer .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    footer ul {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    footer ul li {
-        margin: 5px 0;
-    }
-
-    footer .socials a {
-        font-size: 1.2rem;
-        margin: 5px;
-    }
+footer .socials a:hover {
+    color: #1abc9c; /* تغيير لون الرموز عند التمرير */
+    transform: scale(1.2); /* تكبير الرموز عند التمرير */
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    .post-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .post-content p {
-        font-size: 0.9rem;
-    }
-
-    .contact-us button {
-        font-size: 1rem;
-        padding: 8px;
-    }
-
-    .post img {
-        height: 150px;
-    }
-
-    .post-content {
-        padding: 10px;
-    }
+footer p {
+    font-size: 0.9rem; /* حجم خط أصغر للنصوص الأخرى */
+    margin: 10px 0 0; /* تباعد عمودي أعلى من العناصر الأخرى */
+    line-height: 1.6; /* تحسين تباعد الأسطر للنص */
 }
+
+
+

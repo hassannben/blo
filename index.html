@@ -26,18 +26,25 @@
 </head>
 <body>
     <header>
-        <div class="containerr">
-            <h1>foorfree</h1>
-            <img src="images/conan.png" alt="شعار الموقع">
-            <nav>
+        <div class="container">
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html" class="active">الرئيسية</a></li>
                     <li><a href="#">من نحن</a></li>
                     <li><a href="#">سياسة الخصوصية</a></li>
                 </ul>
             </nav>
+            <h1>foorfree</h1>
+            <img src="images/conan.png" alt="شعار الموقع">
         </div>
     </header>
+    
+    
+    
     <aside class="sidebar">
         <div class="ad-space">
             <p>مساحة الإعلان</p>
@@ -56,28 +63,9 @@
                     </div>
                 </article>
             </a>
-            <a href="article1.html" class="post-link">
-                <article class="post">
-                    <img data-src="images/aadl-2024.jpg" class="lazyload" alt="صورة المقالة الأولى">
-                    <div class="post-content">
-                        <h2>عنوان المقالة الأولى</h2>
-                        <p>هذا هو ملخص قصير للمقالة الأولى. للحصول على المزيد من التفاصيل، يرجى النقر على الرابط أدناه.</p>
-                        <span class="read-more">اقرأ المزيد <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </article>
-            </a>
             <!-- تكرار المقالات هنا -->
         </section>
-
-        <aside class="sidebar">
-            <div class="ad-space">
-                <p>مساحة الإعلان</p>
-            </div>
-        </aside>
     </main>
-
-    
-    </section>
 
     <footer>
         <div class="container">
@@ -95,6 +83,30 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      // تحسين التفاعل مع قائمة التنقل
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            menuToggle.classList.toggle('active');
+        });
+    } else {
+        console.error('Elements .menu-toggle or .nav-menu not found.');
+    }
+});
+
+// تحسين تحميل الصور
+document.addEventListener('DOMContentLoaded', function() {
+    const lazyImages = document.querySelectorAll('img.lazyload');
+    lazyImages.forEach(img => {
+        img.src = img.dataset.src;
+    });
+});
+
+    </script>
 </body>
 </html>
