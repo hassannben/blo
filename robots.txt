@@ -1,0 +1,15 @@
+# السماح لجميع محركات البحث بالوصول إلى جميع الصفحات، مع استثناء مجلد معين وصفحة محددة
+User-agent: *
+Disallow: /private/
+Disallow: /secret-page.html
+
+# السماح لمحرك بحث Googlebot بالوصول إلى جميع الصفحات
+User-agent: Googlebot
+Disallow:
+
+# منع محرك بحث Bingbot من الوصول إلى صفحة معينة
+User-agent: Bingbot
+Disallow: /secret-page.html
+
+# تحديد خريطة الموقع (Sitemap)
+Sitemap: https://hassannben.github.io/blo/sitemap.xml
