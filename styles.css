@@ -11,52 +11,46 @@ body {
     background-color: #ecf0f1;
     color: #2c3e50;
     line-height: 1.6;
-    direction: rtl; /* تعيين اتجاه النص من اليمين لليسار */
-}
-.full-post img{
-    height: 300px;
-    width: 500px;
-
-}
-/* زر القائمة الجانبية */
-#navMobile {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    /* أضف المزيد من الأنماط حسب الحاجة */
+    direction: rtl;
 }
 
-/* قائمة التنقل */
-.nav-menu {
-    display: none; /* إخفاء القائمة افتراضيًا */
+/* تحسين الصور */
+img {
+    max-width: 100%; /* تحديد أقصى عرض للصورة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    margin-bottom: 20px; /* تباعد أسفل الصورة */
 }
 
-/* إظهار القائمة الجانبية عند تفعيلها */
-.sidebar.active .nav-menu {
-    display: block; /* عرض القائمة عند النقر على الزر */
+/* تحسين العناوين */
+h1, h2, h3, h4, h5 {
+    margin: 10px 0; /* تباعد بين العناوين */
+    font-weight: bold;
 }
 
-/* المزيد من الأنماط حسب الحاجة */
-
-/* شيفرة لإخفاء/إظهار القائمة الجانبية */
-button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 24px; /* حجم الأيقونة */
-    color: #333; /* لون الأيقونة */
-    position: absolute;
-    top: 20px;
-    right: 20px;
+/* تحسين حجم الخط */
+h1 {
+    font-size: 2.5rem; /* حجم خط أكبر للشاشات الكبيرة */
+    color: #333;
 }
 
-button:hover {
-    color: #1abc9c; /* لون الأيقونة عند التمرير */
+h2 {
+    font-size: 2rem;
+    color: #555;
 }
 
-/* تصميم القائمة الجانبية */
-/* الأساسيات لتنسيق القائمة الجانبية */
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+/* تحسين القائمة الجانبية */
 .sidebar {
     width: 250px;
     height: 100%;
@@ -69,12 +63,11 @@ button:hover {
     z-index: 1000; /* تأكد من أن القائمة تظهر فوق العناصر الأخرى */
 }
 
-/* حالة القائمة الجانبية عندما تكون نشطة */
+/* إظهار القائمة الجانبية عند تفعيلها */
 .sidebar.active {
     right: 0; /* إظهار القائمة */
 }
 
-/* تصميم عناصر القائمة الجانبية */
 .sidebar ul {
     list-style: none;
     padding: 0;
@@ -96,419 +89,238 @@ button:hover {
     background-color: #1f1abc;
 }
 
-/* التصميم الأساسي للزر */
-#navMobile {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
+/* تحسين الحاوية */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* التصميم الأساسي للزر عند النقر */
-#navMobile:focus {
-    outline: none;
-}
-
-/* تحسين التنسيق داخل الحاوية */
-.containerr {
-    width: 100%; /* العرض الكامل للحاوية بدلاً من عرض ثابت */
-    max-width: 1200px; /* تحديد أقصى عرض للحاوية */
-    margin: 0 auto; /* توسيط الحاوية */
-    padding: 20px; /* تباعد داخلي */
-    text-align: center; /* توسيط النصوص */
-    background-color: #1c86ef; /* خلفية زرقاء */
-    border-radius: 10px; /* زوايا دائرية */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف لإعطاء عمق */
-    min-height: 200px; /* تحديد الحد الأدنى للارتفاع */
-    display: flex;
-    flex-direction: row; /* ترتيب العناصر أفقيًا */
-    align-items: center; /* توسيط المحتوى عمودياً */
-    justify-content: center; /* توسيط المحتوى أفقيًا */
-    box-sizing: border-box; /* لضمان أن التباعد الداخلي لا يؤثر على الحجم الكلي للحاوية */
-}
-
-/* استجابة للشاشات الصغيرة */
-@media (max-width: 768px) {
-    .containerr {
-        padding: 15px; /* تقليل التباعد الداخلي على الشاشات الصغيرة */
-    }
-}
-
-/* استجابة للشاشات الصغيرة جداً */
-@media (max-width: 480px) {
-    .containerr {
-        padding: 10px; /* تقليل التباعد الداخلي بشكل أكبر على الشاشات الصغيرة جداً */
-    }
-}
-
-/* تحسين حجم الخط والتباعد للعناوين */
-h1 {
-    font-size: 2.5rem; /* حجم خط أكبر للعناوين */
-    margin-bottom: 20px; /* تباعد أسفل العنوان */
-    color: #333; /* لون النص */
-    font-family: 'Tajawal', sans-serif; /* استخدام الخط المحدد */
-}
-
-/* تحسين الصور */
-img {
-    max-width: 100%; /* تحديد أقصى عرض للصورة */
-    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
-    margin-bottom: 20px; /* تباعد أسفل الصورة */
-}
-
-/* تحسين القائمة في التنقل */
-nav ul {
-    list-style: none; /* إزالة النقاط من القائمة */
-    padding: 0; /* إزالة التباعد الداخلي */
-    margin: 0; /* إزالة التباعد الخارجي */
-}
-
-nav ul li {
-    display: inline; /* عرض العناصر بشكل أفقي */
-    margin: 0 15px; /* تباعد أفقي بين العناصر */
-}
-
-nav a {
-    text-decoration: none; /* إزالة التسطير */
-    color: #333; /* لون النص الافتراضي */
-    font-size: 1.2rem; /* حجم خط أكبر للروابط */
-    padding: 10px 15px; /* تباعد حول النصوص */
-    border-radius: 5px; /* زوايا دائرية */
-    transition: background-color 0.3s ease, color 0.3s ease; /* تأثيرات الانتقال */
-}
-
-nav a.active {
-    background-color: #5b43d1; /* خلفية مميزة للعنصر النشط */
-    color: #fff; /* لون النص الأبيض */
-}
-
-nav a:hover,
-nav a:focus {
-    background-color: #493bb7; /* لون الخلفية عند التمرير أو التركيز */
-    color: #fff; /* لون النص عند التمرير أو التركيز */
-}
-
-/* تنسيق الهيدر */
+/* تحسين الهيدر */
 header {
+    background-color: #4a3db1; /* لون خلفية الهيدر */
+    color: #f2f1f7; /* لون النص */
+    padding: 10px 20px; /* تباعد داخلي للهيدر */
+    border-bottom: 1px solid #ddd; /* تحديد الحدود السفلية */
     display: flex;
     align-items: center;
-    justify-content: space-between; /* يوزع العناصر بالتساوي بين اليمين واليسار */
-    padding: 10px 20px;
-    background-color: #4a3db1;
-    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
 }
 
-/* تنسيق الحاوية داخل الهيدر */
-header .container {
+.container {
     display: flex;
     align-items: center;
-    flex: 1;
-    justify-content: center; /* مراكز العناصر داخل الحاوية */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-header h1 {
-    font-family: 'Tajawal', sans-serif;
-    font-size: 30px;
-    color: brown;
-   
-
-}
-
-header img {
-    /* يمكن تعديل حجم الصورة إذا لزم الأمر */
-    width: 200px;
-    height: 100px;
-   
-   
-}
-
-/* تنسيق زر القائمة الجانبية */
+/* تحسين زر القائمة الجانبية */
 #navMobile {
     background-color: transparent;
     border: none;
     color: #f2f1f7;
-    font-size: 44px;
+    font-size: 24px; /* حجم الخط المناسب للزر */
     cursor: pointer;
+    margin-right: 15px; /* تباعد للزر */
 }
 
-/* تنسيق زر القائمة الجانبية عند النقر */
-#navMobile:focus {
-    outline: none;
+/* تحسين تصميم صورة الشعار */
+.logo-link {
+    display: flex; /* استخدم flexbox لتوسيع الصورة */
+    justify-content: center; /* توسيط الصورة أفقياً */
+    align-items: center; /* توسيط الصورة عمودياً */
 }
 
-
-/* تحسين رابط النشط */
-.active {
-    background-color: #5b43d1; /* خلفية مميزة للعنصر النشط */
-    color: #fff; /* لون النص الأبيض */
-    font-weight: bold; /* جعل النص غامق */
-    border-radius: 8px; /* زاوية دائرية لتلطيف الزوايا */
-    padding: 10px 15px; /* تباعد حول النص */
-    text-decoration: none; /* إزالة التسطير */
-    display: inline-block; /* عرض العنصر ككتلة مضمنة */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* تأثيرات الانتقال */
+.logo-link img {
+    
+    display: block; /* تأكد من أن الصورة تتصرف بشكل صحيح */
+    max-width: 100%; /* لضمان عدم تجاوز الصورة لعرض الحاوية */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
 }
 
-.active:hover,
-.active:focus {
-    background-color: #3638b1; /* لون الخلفية عند التمرير أو التركيز */
-    transform: scale(1.05); /* تكبير بسيط عند التمرير أو التركيز */
-    outline: none; /* إزالة التأثير الافتراضي عند التركيز */
-    box-shadow: 0 0 0 2px #36b138; /* ظل لإبراز العنصر عند التركيز */
+/* تحسين عنوان الرأس */
+header h1 {
+    color: red;
+    font-size: 1.8rem; /* حجم خط مناسب */
+    margin: 0;
+    flex: 2; /* لجعل العنوان يتوسع في المساحة المتاحة */
+    text-align: center; /* محاذاة النص في الوسط */
 }
 
-/* تحسين القائمة في التنقل */
-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row-reverse; /* تغيير اتجاه القائمة */
-    padding-left: 0;
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* ترتيب العناصر عموديًا */
+        text-align: center; /* محاذاة النص في الوسط */
+    }
+
+    #navMobile {
+        margin-bottom: 10px; /* تباعد أسفل الزر */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* تقليل حجم الخط للشاشات الصغيرة */
+    }
 }
 
-nav ul li {
-    margin: 0 10px; /* تغيير المسافة لليمين */
+@media (max-width: 480px) {
+    #navMobile {
+        font-size: 20px; /* تصغير حجم الخط للزر */
+    }
+
+    header h1 {
+        font-size: 1.0rem; /* تصغير حجم الخط أكثر */
+    }
 }
 
-nav ul li a {
-    color: #fff;
+/* تحسين الفوتر */
+footer {
+    background-color: #2c3e50; /* لون خلفية داكنة للـ footer */
+    color: white;
+    padding: 20px 20px; /* تباعد داخلي كافٍ */
+    text-align: center; /* توسيط النصوص */
+    border-top: 1px solid #34495e; /* خط تفصيلي بين الـ footer والمحتوى */
+    height: auto;
+}
+
+/* تحسين تباعد الفقرات */
+footer p {
+    margin-bottom: 20px; /* تباعد أسفل الفقرة */
+    font-size: 1rem; /* حجم خط مناسب للفقرات */
+    color: #f2f1f7; /* لون نص متناسق مع الخلفية */
+}
+
+/* تحسين تصميم روابط الفوتر */
+.footer-links {
+    margin-bottom: 20px; /* تباعد أسفل الروابط */
+  
+    list-style: none; /* إزالة النقاط من القائمة */
+    text-align: center; /* توسيط الروابط */
+}
+
+.footer-link {
     text-decoration: none;
-    font-size: 1.2rem;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    color: #1abc9c; /* لون مميز للروابط */
+    font-size: 0.9rem; /* حجم خط مناسب للروابط */
+ 
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* تأثيرات انتقال سلسة */
 }
 
-nav ul li a.active {
-    background-color: #1abc9c;
-    color: #fff;
-    border-radius: 5px;
+.footer-link:hover {
+    color: #16a085; /* تغيير اللون عند التمرير */
+    text-decoration: underline; /* تسطير الروابط عند التمرير */
 }
 
-nav ul li a:hover {
-    background-color: #1abc9c;
-    color: #f4f4f4;
-    transform: scale(1.05);
-}
-
-/* تصميم الجسم الرئيسي */
-main.container {
+/* تحسين تصميم الأيقونات الاجتماعية */
+.socials {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    gap: 20px;
-    flex-wrap: wrap; /* للسماح للعناصر بالانتقال إلى الأسطر التالية */
+    flex-direction: row; /* ترتيب الأيقونات في عمود */
+    align-items: center; /* توسيط الأيقونات عمودياً */
+    margin: 20px 0; /* تباعد حول الأيقونات الاجتماعية */
 }
 
-.read-more {
-    padding: 15px 25px; /* زيادة التباعد الداخلي حول النص */
-    background: #45d143; /* لون الخلفية الأخضر */
-    border-radius: 8px; /* زاوية دائرية للزر */
-    color: #fff; /* لون النص الأبيض */
-    text-align: center; /* توسيط النص */
-    text-decoration: none; /* إزالة التسطير */
-    font-weight: bold; /* جعل النص غامق */
-    font-size: 16px; /* حجم النص */
-    display: inline-block; /* عرض الزر ككتلة مضمنة */
-    transition: background 0.3s ease, transform 0.3s ease; /* تأثيرات الانتقال */
+.social-icon {
+    color: #f2f1f7; /* لون أيقونات اجتماعية متناسقة مع النص */
+    margin: 0 15px; /* تباعد بين الأيقونات */
+    font-size: 28px; /* حجم أكبر للأيقونات */
+    transition: color 0.3s ease, transform 0.3s ease; /* تأثيرات انتقال سلسة */
 }
 
-.read-more:hover {
-    background: #36b138; /* لون الخلفية عند التمرير */
-    transform: scale(1.05); /* تكبير بسيط عند التمرير */
+.social-icon:hover {
+    color: #1abc9c; /* تغيير اللون عند التمرير */
+    transform: scale(1.1); /* تأثير تكبير الأيقونات */
 }
 
-.read-more:focus {
-    outline: none; /* إزالة التأثير الافتراضي عند التركيز */
-    box-shadow: 0 0 0 2px #36b138; /* ظل لإبراز الزر عند التركيز */
+/* تحسين استجابة التصميم */
+@media (max-width: 768px) {
+    .footer-links {
+        text-align: center; /* توسيط الروابط في الشاشات الصغيرة */
+    }
+
+    .footer-link {
+        display: block; /* عرض العناصر في خط عمودي */
+        margin: 10px 0; /* تباعد مناسب بين العناصر */
+    }
+
+    .socials {
+        margin: 5px 0; /* تقليل التباعد حول الأيقونات الاجتماعية */
+    }
+
+    .social-icon {
+        font-size: 20px; /* تقليل حجم الأيقونات الاجتماعية في الشاشات الصغيرة */
+        margin: 0 10px; /* تقليل التباعد بين الأيقونات */
+    }
 }
 
-/* تحسين تصميم المقالات */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* تقليل التباعد الداخلي */
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-size: 0.9rem; /* حجم الخط للعناوين */
+    }
+
+    .social-icon {
+        font-size: 20px; /* تقليل حجم الأيقونات الاجتماعية */
+        margin: 0 8px; /* تقليل التباعد بين الأيقونات */
+    }
+}
+
+/* تحسين المظهر العام للمقالات */
 .posts {
-    flex: 3;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* تحديد عدد الأعمدة حسب حجم الشاشة */
+    gap: 20px; /* تباعد بين المقالات */
+    margin-top: 20px;
 }
 
-/* تحسين الرابط الخاص بالمقالة */
+/* تحسين مظهر رابط المقالات */
 .post-link {
-    display: block;
-    text-decoration: none; /* إزالة التسطير */
-    color: inherit; /* استخدام لون النص الداخلي للمقالة */
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* تحسين مظهر المقالات */
 .post {
-    background: #fff;
+    display: flex;
+    flex-direction: column;
+    background: white;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden; /* تأكد من عدم تجاوز العناصر للحاوية */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 .post:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px); /* رفع المقالة عند التمرير */
+    transform: translateY(-5px); /* تأثير التحويم */
 }
 
-/* تحسين العناصر داخل المقالة */
-.post img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.post .content {
+.post-content {
     padding: 20px;
 }
 
-.post h2 {
-    font-size: 1.5rem;
+.post-content h2 {
+    font-size: 1.4rem; /* حجم الخط المناسب للعناوين داخل المقالات */
     margin-bottom: 10px;
 }
 
-.post p {
-    font-size: 1rem;
-    line-height: 1.4;
+.post-content p {
+    font-size: 1rem; /* حجم خط مناسب للنصوص */
+    margin-bottom: 10px; /* تباعد أسفل النصوص */
 }
 
-/* تحسين تنسيق الأزرار */
-.button {
-    background: #1abc9c; /* خلفية الأزرار */
-    color: #fff; /* لون النص الأبيض */
-    padding: 10px 20px; /* تباعد داخلي */
-    border-radius: 5px; /* زوايا دائرية */
-    text-decoration: none; /* إزالة التسطير */
-    font-weight: bold; /* جعل النص غامق */
-    transition: background 0.3s ease, transform 0.3s ease; /* تأثيرات الانتقال */
+/* تحسين رابط "اقرأ المزيد" */
+.read-more {
+    font-size: 0.9rem;
+    color: #1abc9c; /* لون الرابط */
+    text-decoration: none;
+    margin-top: 10px; /* تباعد أعلى الرابط */
 }
 
-.button:hover {
-    background: #16a085; /* لون الخلفية عند التمرير */
-    transform: scale(1.05); /* تكبير بسيط عند التمرير */
+.read-more:hover {
+    text-decoration: underline; /* تسطير الرابط عند التمرير */
 }
-
-/* تحسين تصميم نموذج الاتصال */
-.contact-us {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* تباعد بين العناصر */
-}
-
-/* تحسين الحقول */
-.contact-us input,
-.contact-us textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.contact-us textarea {
-    min-height: 150px;
-    resize: vertical; /* السماح بتغيير الحجم عموديًا فقط */
-}
-
-/* تحسين زر إرسال النموذج */
-.contact-us button {
-    background: #1abc9c;
-    color: #fff;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.3s ease; /* تأثيرات الانتقال */
-}
-
-.contact-us button:hover {
-    background: #16a085;
-    transform: scale(1.05);
-}
-
-.contact-us button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px #16a085;
-}
-
-
-footer {
-    
-    background-color: #2479cd; /* خلفية داكنة للفوتر */
-    color: #ecf0f1; /* لون النص الفاتح */
-    padding: 20px 0; /* تباعد عمودي للفوتر */
-    text-align: center; /* توسيط النصوص */
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للفوتر */
-}
-
-footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* توسيط العناصر عموديًا */
-    max-width: 1200px; /* تحديد أقصى عرض للحاوية */
-    margin: 0 auto; /* توسيط الحاوية */
-    padding: 0 20px; /* تباعد داخلي على الجانبين */
-    
-}
-
-footer ul {
-    display: flex;
-    flex-direction: row; /* عرض العناصر عموديًا */
-    padding: 0; /* إزالة التباعد الداخلي */
-    list-style: none; /* إزالة النقاط من القائمة */
-    margin: 15px 0; /* تباعد عمودي بين القائمة والعناصر الأخرى */
-    align-items: center; /* توسيط العناصر أفقيًا */
-}
-
-footer ul li {
-    margin: 10px 0; /* زيادة التباعد العمودي بين العناصر */
-    padding: 10px 15px; /* إضافة تباعد داخلي لجعل العنصر أكبر قليلاً */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* تأثير الانتقال عند التمرير */
-    width: 100%; /* جعل العناصر بعرض الحاوية */
-    text-align: center; /* توسيط النص داخل العنصر */
-    color: #fff; /* لون النص الافتراضي */
-    cursor: pointer; /* تغيير المؤشر عند التمرير */
-    border-radius: 5px; /* زوايا دائرية خفيفة للعنصر */
-}
-
-footer ul li a {
-    color: #fff; /* لون الروابط أبيض */
-    text-decoration: none; /* إزالة التسطير تحت الروابط */
-    transition: color 0.3s ease; /* تأثير تغيير اللون عند التمرير */
-}
-
-footer ul li a:hover {
-    color: #1abc9c; /* تغيير لون الروابط عند التمرير */
-}
-
-footer .socials {
-    margin-top: 20px; /* زيادة التباعد العمودي أعلى من العناصر الأخرى */
-    display: flex; /* عرض الرموز بشكل أفقي */
-    gap: 15px; /* تباعد بين الرموز */
-}
-
-footer .socials a {
-    font-size: 1.5rem; /* حجم خط أكبر للرموز الاجتماعية */
-    color: #ecf0f1; /* لون الرموز */
-    transition: color 0.3s ease, transform 0.3s ease; /* تأثير التغيير في اللون والحجم */
-}
-
-footer .socials a:hover {
-    color: #1abc9c; /* تغيير لون الرموز عند التمرير */
-    transform: scale(1.2); /* تكبير الرموز عند التمرير */
-}
-
-footer p {
-    font-size: 0.9rem; /* حجم خط أصغر للنصوص الأخرى */
-    margin: 10px 0 0; /* تباعد عمودي أعلى من العناصر الأخرى */
-    line-height: 1.6; /* تحسين تباعد الأسطر للنص */
-}
-
-
-
