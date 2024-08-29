@@ -253,6 +253,7 @@ footer p {
     /* لون نص متناسق مع الخلفية */
 }
 
+
 /* تحسين تصميم روابط الفوتر */
 .footer-links {
     margin-bottom: 20px;
@@ -262,6 +263,7 @@ footer p {
     /* إزالة النقاط من القائمة */
     text-align: center;
     /* توسيط الروابط */
+    text-decoration: none;
 }
 
 .footer-link {
@@ -281,6 +283,7 @@ footer p {
     text-decoration: underline;
     /* تسطير الروابط عند التمرير */
 }
+
 
 /* تحسين تصميم الأيقونات الاجتماعية */
 .socials {
@@ -316,6 +319,7 @@ footer p {
     .footer-links {
         text-align: center;
         /* توسيط الروابط في الشاشات الصغيرة */
+        text-decoration: none;
     }
 
     .footer-link {
