@@ -195,7 +195,7 @@ header {
     align-items: center;
     justify-content: space-between; /* يوزع العناصر بالتساوي بين اليمين واليسار */
     padding: 10px 20px;
-    background-color: #f8f8f8;
+    background-color: #4a3db1;
     border-bottom: 1px solid #ddd;
 }
 
@@ -209,22 +209,26 @@ header .container {
 
 header h1 {
     font-family: 'Tajawal', sans-serif;
-    font-size: 24px;
+    font-size: 44px;
     margin: 0;
+    color: brown;
+   
+
 }
 
 header img {
     /* يمكن تعديل حجم الصورة إذا لزم الأمر */
     width: 100px;
     height: 100px;
+    right: 50% ;
 }
 
 /* تنسيق زر القائمة الجانبية */
 #navMobile {
     background-color: transparent;
     border: none;
-    color: #4131a9;
-    font-size: 24px;
+    color: #f2f1f7;
+    font-size: 44px;
     cursor: pointer;
 }
 
