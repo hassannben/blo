@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>foorfree</title>
+  <link href="https://hassannben.github.io/blo/"/>
+  <updated>2024-08-31T00:00:00Z</updated>
+  <id>https://hassannben.github.io/blo/</id>
+  <entry>
+    <title>aadl3 inscription التسجيل في عدل 3 الجزائر 2024</title>
+    <link href="https://hassannben.github.io/blo/article/article1.html"/>
+    <id>https://hassannben.github.io/blo/article/article1.html</id>
+    <updated>2024-08-31T00:00:00Z</updated>
+    <summary>ملخص المقال</summary>
+    <content>محتوى المقال</content>
+  </entry>
+  <!-- أضف عناصر <entry> إضافية هنا -->
+</feed>
