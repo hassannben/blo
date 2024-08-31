@@ -17,11 +17,8 @@ body {
 /* تحسين الصور */
 img {
     max-width: 100%;
-    /* تحديد أقصى عرض للصورة */
     height: auto;
-    /* الحفاظ على نسبة العرض إلى الارتفاع */
     margin-bottom: 20px;
-    /* تباعد أسفل الصورة */
 }
 
 /* تحسين العناوين */
@@ -31,14 +28,12 @@ h3,
 h4,
 h5 {
     margin: 10px 0;
-    /* تباعد بين العناوين */
     font-weight: bold;
 }
 
 /* تحسين حجم الخط */
 h1 {
     font-size: 2.5rem;
-    /* حجم خط أكبر للشاشات الكبيرة */
     color: #333;
 }
 
@@ -67,17 +62,13 @@ h5 {
     position: fixed;
     top: 0;
     right: -250px;
-    /* مخفية افتراضيًا */
     transition: right 0.3s ease;
     padding-top: 60px;
     z-index: 1000;
-    /* تأكد من أن القائمة تظهر فوق العناصر الأخرى */
 }
 
-/* إظهار القائمة الجانبية عند تفعيلها */
 .sidebar.active {
     right: 0;
-    /* إظهار القائمة */
 }
 
 .sidebar ul {
@@ -112,13 +103,9 @@ h5 {
 /* تحسين الهيدر */
 header {
     background-color: #4a3db1;
-    /* لون خلفية الهيدر */
     color: #f2f1f7;
-    /* لون النص */
     padding: 10px 20px;
-    /* تباعد داخلي للهيدر */
     border-bottom: 1px solid #ddd;
-    /* تحديد الحدود السفلية */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -138,310 +125,111 @@ header {
     border: none;
     color: #f2f1f7;
     font-size: 24px;
-    /* حجم الخط المناسب للزر */
     cursor: pointer;
     margin-right: 15px;
-    /* تباعد للزر */
     margin-left: auto;
-    /* دفع الزر إلى اليمين */
 }
 
 /* تحسين تصميم صورة الشعار كخلفية */
 .logo-link .logo-background {
     width: 170px;
-    /* عرض الخلفية */
     height: auto;
-    /* الحفاظ على نسبة العرض إلى الارتفاع */
     background-image: url('images/ferdoom.png');
-    /* تحديد مسار الصورة */
     background-size: contain;
-    /* جعل الصورة تناسب الحجم المحدد */
     background-repeat: no-repeat;
-    /* منع تكرار الصورة */
     background-position: center;
-    /* توسيط الصورة */
     display: block;
-    /* تأكد من أن العنصر يتصرف بشكل صحيح */
 }
-
 
 /* تحسين تصميم صورة الشعار */
 .logo-link {
     display: flex;
-    /* استخدم flexbox لتوسيع الصورة */
     justify-content: center;
-    /* توسيط الصورة أفقياً */
     align-items: center;
-    /* توسيط الصورة عمودياً */
 }
 
 .logo-link img {
-
     display: block;
-    /* تأكد من أن الصورة تتصرف بشكل صحيح */
     max-width: 100%;
-    /* لضمان عدم تجاوز الصورة لعرض الحاوية */
     height: auto;
-    /* الحفاظ على نسبة العرض إلى الارتفاع */
 }
 
 /* تحسين عنوان الرأس */
 header h1 {
     color: rgb(8, 8, 8);
     font-size: 1.8rem;
-    /* حجم خط مناسب */
     margin: 0;
     flex: 2;
-    /* لجعل العنوان يتوسع في المساحة المتاحة */
     text-align: center;
-    /* محاذاة النص في الوسط */
 }
 
 /* استجابة للشاشات الصغيرة */
 @media (max-width: 768px) {
     header {
         flex-direction: row;
-        /* ترتيب العناصر عموديًا */
         text-align: center;
-        /* محاذاة النص في الوسط */
     }
 
     #navMobile {
         margin-bottom: 10px;
-        /* تباعد أسفل الزر */
     }
 
     header h1 {
         font-size: 1.5rem;
-        /* تقليل حجم الخط للشاشات الصغيرة */
     }
 }
 
 @media (max-width: 480px) {
     #navMobile {
         font-size: 20px;
-        /* تصغير حجم الخط للزر */
     }
 
     header h1 {
         font-size: 1.0rem;
-        /* تصغير حجم الخط أكثر */
     }
 }
 
 /* تحسين الفوتر */
 footer {
     background-color: #2c3e50;
-    /* لون خلفية داكنة للـ footer */
     color: white;
     padding: 20px 20px;
-    /* تباعد داخلي كافٍ */
     text-align: center;
-    /* توسيط النصوص */
-    border-top: 1px solid #34495e;
-    /* خط تفصيلي بين الـ footer والمحتوى */
-    height: auto;
-}
-
-/* تحسين تباعد الفقرات */
-footer p {
-    margin-bottom: 20px;
-    /* تباعد أسفل الفقرة */
-    font-size: 1rem;
-    /* حجم خط مناسب للفقرات */
-    color: #f2f1f7;
-    /* لون نص متناسق مع الخلفية */
-}
-
-
-/* تحسين تصميم روابط الفوتر */
-.footer-links {
-    margin-bottom: 20px;
-    /* تباعد أسفل الروابط */
-
-    list-style: none;
-    /* إزالة النقاط من القائمة */
-    text-align: center;
-    /* توسيط الروابط */
-    text-decoration: none;
-}
-
-.footer-link {
-    text-decoration: none;
-    color: #1abc9c;
-    /* لون مميز للروابط */
-    font-size: 0.9rem;
-    /* حجم خط مناسب للروابط */
-
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-    /* تأثيرات انتقال سلسة */
-}
-
-.footer-link:hover {
-    color: #16a085;
-    /* تغيير اللون عند التمرير */
-    text-decoration: underline;
-    /* تسطير الروابط عند التمرير */
-}
-
-
-/* تحسين تصميم الأيقونات الاجتماعية */
-.socials {
-    display: flex;
-    flex-direction: row;
-    /* ترتيب الأيقونات في عمود */
-    align-items: center;
-    /* توسيط الأيقونات عمودياً */
-    margin: 20px 0;
-    /* تباعد حول الأيقونات الاجتماعية */
-}
-
-.social-icon {
-    color: #f2f1f7;
-    /* لون أيقونات اجتماعية متناسقة مع النص */
-    margin: 0 15px;
-    /* تباعد بين الأيقونات */
-    font-size: 28px;
-    /* حجم أكبر للأيقونات */
-    transition: color 0.3s ease, transform 0.3s ease;
-    /* تأثيرات انتقال سلسة */
-}
-
-.social-icon:hover {
-    color: #1abc9c;
-    /* تغيير اللون عند التمرير */
-    transform: scale(1.1);
-    /* تأثير تكبير الأيقونات */
-}
-
-/* تحسين استجابة التصميم */
-@media (max-width: 768px) {
-    .footer-links {
-        text-align: center;
-        /* توسيط الروابط في الشاشات الصغيرة */
-        text-decoration: none;
-    }
-
-    .footer-link {
-        display: block;
-        /* عرض العناصر في خط عمودي */
-        margin: 10px 0;
-        /* تباعد مناسب بين العناصر */
-    }
-
-    .socials {
-        margin: 5px 0;
-        /* تقليل التباعد حول الأيقونات الاجتماعية */
-    }
-
-    .social-icon {
-        font-size: 20px;
-        /* تقليل حجم الأيقونات الاجتماعية في الشاشات الصغيرة */
-        margin: 0 10px;
-        /* تقليل التباعد بين الأيقونات */
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-        /* تقليل التباعد الداخلي */
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        font-size: 0.9rem;
-        /* حجم الخط للعناوين */
-    }
-
-    .social-icon {
-        font-size: 20px;
-        /* تقليل حجم الأيقونات الاجتماعية */
-        margin: 0 8px;
-        /* تقليل التباعد بين الأيقونات */
-    }
-}
-
-/* تحسين المظهر العام للمقالات */
-.posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    /* تحديد عدد الأعمدة حسب حجم الشاشة */
-    gap: 20px;
-    /* تباعد بين المقالات */
     margin-top: 20px;
 }
 
-/* تحسين مظهر رابط المقالات */
-.post-link {
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* تحسين مظهر المقالات */
-.post {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    /* تأكد من عدم تجاوز العناصر للحاوية */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.post:hover {
-    transform: translateY(-5px);
-    /* تأثير التحويم */
-}
-
-.post-content {
-    padding: 20px;
-}
-
-.post-content h2 {
-    font-size: 1.4rem;
-    /* حجم الخط المناسب للعناوين داخل المقالات */
-    margin-bottom: 10px;
-}
-
-.post-content p {
-    font-size: 1rem;
-    /* حجم خط مناسب للنصوص */
-    margin-bottom: 10px;
-    /* تباعد أسفل النصوص */
-}
-
-/* تحسين رابط "اقرأ المزيد" */
-.read-more {
-    font-size: 0.9rem;
-    color: #1abc9c;
-    /* لون الرابط */
-    text-decoration: none;
-    margin-top: 10px;
-    /* تباعد أعلى الرابط */
-}
-
-.read-more:hover {
-    text-decoration: underline;
-    /* تسطير الرابط عند التمرير */
-}
-.video-container {
+.footer-links {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh; /* اجعل الحاوية بنفس ارتفاع الشاشة */
-    padding: 0 20px; /* هامش داخلي لتجنب الالتصاق بالأطراف */
-    box-sizing: border-box;
+    margin-bottom: 10px;
 }
 
-.video-container iframe {
-    width: 80%; /* عرض الفيديو كنسبة من الشاشة */
-    height: 45vw; /* الارتفاع نسبة إلى العرض لتناسب الفيديو (16:9) */
-    max-width: 800px; /* حد أقصى للعرض */
-    max-height: 450px; /* حد أقصى للارتفاع */
+.footer-link {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.cop {
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.social-icon:hover {
+    color: #3498db;
 }
