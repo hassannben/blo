@@ -430,3 +430,18 @@ footer p {
     text-decoration: underline;
     /* تسطير الرابط عند التمرير */
 }
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* اجعل الحاوية بنفس ارتفاع الشاشة */
+    padding: 0 20px; /* هامش داخلي لتجنب الالتصاق بالأطراف */
+    box-sizing: border-box;
+}
+
+.video-container iframe {
+    width: 80%; /* عرض الفيديو كنسبة من الشاشة */
+    height: 45vw; /* الارتفاع نسبة إلى العرض لتناسب الفيديو (16:9) */
+    max-width: 800px; /* حد أقصى للعرض */
+    max-height: 450px; /* حد أقصى للارتفاع */
+}
