@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تفاصيل حول عنوان المقالة الأولى. اقرأ المزيد عن الموضوع هنا.">
+    <title>foorfree</title>
+    <link rel="icon" href="..\images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="..\code\styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="..\code\script.js" as="script">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <button aria-label="فتح القائمة" id="navMobile">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="..\index.html" class="logo-link">
+                <a href="..\index.html" class="logo-link">
+                    <img src="..\images/ferdoom.png" class="logo-background"></img> <!-- استخدم div بدلاً من img -->
+                </a>
+          
+        </div>
+        <h1>foorfree</h1>
+    </header>
+    <aside class="sidebar">
+        <ul>
+            <li><a href="..\index.html">الرئيسية</a></li>
+            <li><a href="..\pages/about.html">من نحن</a></li>
+            <li><a href="..\pages/privacy.html">سياسة الخصوصية</a></li>
+        </ul>
+    </aside>
+   
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+        <iframe src="https://geo.dailymotion.com/player.html?video=x94vzvo"
+          style="width:50%; height:50%; position:absolute; left:400px; top:99px; overflow:hidden; border:none;"
+          allowfullscreen
+          title="Dailymotion Video Player"
+          allow="web-share">
+        </iframe>
+      </div> 
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="..\pages\termsofuse.html" class="footer-link">شروط الاستخدام</a>
+                <a href="..\pages\privacy.html" class="footer-link">سياسة الخصوصية</a>
+                <a href="..\pages\contactus.html" class="footer-link">اتصل بنا</a>
+            </div>
+            <p class="cop">© 2024 موقعك هنا. جميع الحقوق محفوظة.</p>
+            <div class="socials">
+                <a href="#" class="social-icon" aria-label="صفحة فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="صفحة تويتر"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" aria-label="صفحة إنستغرام"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleSidenav() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+        document.getElementById('navMobile').addEventListener('click', toggleSidenav);
+        document.addEventListener('click', function (event) {
+            const sidebar = document.querySelector('.sidebar');
+            const navMobile = document.getElementById('navMobile');
+            if (!sidebar.contains(event.target) && !navMobile.contains(event.target) && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
