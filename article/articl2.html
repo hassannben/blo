@@ -59,19 +59,8 @@
             </div>
         </div>
     </footer>
-    <script>
-        function toggleSidenav() {
-            const sidebar = document.querySelector('.sidebar');
-            sidebar.classList.toggle('active');
-        }
-        document.getElementById('navMobile').addEventListener('click', toggleSidenav);
-        document.addEventListener('click', function (event) {
-            const sidebar = document.querySelector('.sidebar');
-            const navMobile = document.getElementById('navMobile');
-            if (!sidebar.contains(event.target) && !navMobile.contains(event.target) && sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
-            }
-        });
+    <script src="..\code\script.js">
+    
     </script>
 </body>
 
