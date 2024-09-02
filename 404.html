@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صفحة غير موجودة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #e74c3c;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .error-img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>الصفحة المطلوبة غير موجودة</h1>
-    <p>الصفحة التي تحاول الوصول إليها غير موجودة. يرجى العودة إلى <a href="https://hassannben.github.io/blo">الصفحة الرئيسية</a>.</p>
+    <div class="container">
+        <img src="https://via.placeholder.com/150" alt="Error Image" class="error-img">
+        <h1>الصفحة المطلوبة غير موجودة</h1>
+        <p>عذرًا، الصفحة التي تحاول الوصول إليها غير موجودة. يمكنك العودة إلى <a href="https://hassannben.github.io/blo">الصفحة الرئيسية</a>.</p>
+    </div>
 </body>
 </html>
