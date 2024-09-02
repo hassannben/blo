@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HLS Video Player</title>
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .video-js {
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- إضافة مشغل الفيديو -->
+    <video id="my-video" class="video-js vjs-default-skin" controls preload="metadata" width="640" height="264">
+        <source src="https://fe.tring.al/delta/105/out/u/1200_1.m3u8" type="application/x-mpegURL">
+        Your browser does not support the video tag or the file format of this video.
+    </video>
+
+    <!-- تضمين مكتبة Video.js -->
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    <!-- تضمين مكتبة الجودة -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-quality-levels/2.1.0/videojs-contrib-quality-levels.min.js"></script>
+    <script>
+        // التأكد من عدم تهيئة المشغل مسبقًا
+        if (!videojs.getPlayers()['my-video']) {
+            // تهيئة المشغل مع الإعدادات المحسنة
+            var player = videojs('my-video', {
+                responsive: true,
+                controlBar: {
+                    volumePanel: { inline: false },
+                    pictureInPictureToggle: true,
+                },
+                html5: {
+                    vhs: { // استبدال hls بـ vhs لتجنب التحذيرات
+                        withCredentials: false,
+                    }
+                }
+            });
+
+            // جاهزية المشغل
+            player.ready(function() {
+                // التأكد من وجود دعم لمستويات الجودة
+                if (player.qualityLevels) {
+                    var qualityLevels = player.qualityLevels();
+                    qualityLevels.on('addqualitylevel', function(event) {
+                        var qualityLevel = event.qualityLevel;
+                        console.log('New quality level added:', qualityLevel);
+                    });
+                } else {
+                    console.warn('Quality levels plugin not available.');
+                }
+            });
+
+            // التعامل مع الأخطاء
+            player.on('error', function() {
+                console.error('Video loading error:', player.error());
+                alert('An error occurred while loading the video. Please check your connection or try again later.');
+            });
+        } else {
+            console.warn('Player "my-video" is already initialised.');
+        }
+    </script>
+
+</body>
+</html>
